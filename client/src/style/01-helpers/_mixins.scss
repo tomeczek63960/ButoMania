@@ -1,0 +1,69 @@
+@mixin absolute($top:auto,$right:auto,$bottom:auto,$left:auto,$transform:auto,$index:auto,$position:absolute) {
+    
+    position: $position;
+
+    @if($top != auto){
+        top:$top;
+    }
+    @if($right != auto){
+        right:$right;
+    }
+    @if($bottom != auto){
+        bottom:$bottom;
+    }
+    @if($left != auto){
+        left:$left;
+    }
+    @if($transform != auto){
+        transform:$transform;
+    }
+    @if($index != auto){
+        z-index:$index;
+    }
+    
+}
+
+@mixin size( $width:auto, $height:auto, $margin:auto, $padding:auto ) {
+    @if($width != auto){
+        width:$width;
+    }
+    @if($height != auto){
+        height:$height;
+    }
+    @if($margin != auto){
+        margin:$margin;
+    }
+    @if($padding != auto){
+        padding:$padding;
+    }
+}
+
+@mixin backgroundImage($url:auto, $size:auto, $position:auto, $repeat:no-repeat) {
+    @if($url != auto){
+        background-image: url('../assets/#{$url}');
+    }
+    @if($size != auto){
+        background-size: $size;
+    }
+    @if($position != auto){
+        background-position: $position;
+    }
+    background-repeat: $repeat;
+}
+
+@mixin flex($justify:auto, $align:auto, $direction:auto,$wrap:auto, $display:flex) {
+    display: $display;
+
+    @if($justify != auto){
+        justify-content: $justify;
+    }
+    @if($align != auto){
+        align-items: $align;
+    }
+    @if($direction != auto){
+        flex-direction: $direction;
+    }
+    @if($wrap != auto){
+        flex-wrap:$wrap;
+    }
+}

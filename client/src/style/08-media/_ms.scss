@@ -1,0 +1,10 @@
+@media screen and (min-width:900px){
+    @include pageFooter--ms;
+    @include pageHero--ms;
+    @include basketPage--ms;
+    @include productPage--ms;
+}
+
+@media screen and (min-width:1000px){
+    @include flexTemplate--ms-1000;
+}

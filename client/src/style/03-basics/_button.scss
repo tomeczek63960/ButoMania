@@ -1,0 +1,27 @@
+.btn--primary{
+    @extend %btn;
+    @include size(100%, 45px, 20px 0 0);
+    display: block;
+    background-color: $navblue;
+    font-size: 18px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.btn--secondary{
+    @extend %btn;
+    margin-right: 25px;
+    margin-top: 25px;
+    padding: 10px 25px;
+    display: inline-block;
+    background: $red;
+    border:none;
+    border-radius: 7px;
+    font-size: 17px;
+}
+
+@mixin button--sm {
+    .btn--secondary{
+        padding: 13px 35px;
+    }
+}

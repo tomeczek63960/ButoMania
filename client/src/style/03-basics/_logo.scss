@@ -1,0 +1,22 @@
+.page-logo{
+    @include backgroundImage('icons/logo.png',contain, left center);
+    @include size(auto, 30px, auto, 0 0 0 30px);
+    display: block;
+    color:$navblue;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    line-height: 30px;
+    
+    &__span{
+        color:$red;
+    }
+}
+
+@media screen and (min-width:330px){
+    .page-logo{
+        @include size(auto, 40px, auto, 0 0 0 35px);
+        line-height: 40px;
+        font-size: 25px;
+    }
+}

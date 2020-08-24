@@ -1,0 +1,7 @@
+.page-nav__basket{
+    @include backgroundImage('icons/bag.svg',cover,center);
+    @include size(50px, 50px);
+    display: block;
+    border:none;
+    background-color: transparent;
+}

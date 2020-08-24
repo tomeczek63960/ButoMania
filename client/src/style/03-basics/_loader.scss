@@ -1,0 +1,5 @@
+.loader-wrapper{
+    @include flex(center,center);
+    @include absolute(0,0,0,0,auto,100,fixed);
+    background-color: rgba(0,0,0,0.6);
+}

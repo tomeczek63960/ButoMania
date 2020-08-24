@@ -1,0 +1,19 @@
+@media screen and (min-width:700px){
+    @include utilities--sm;
+    @include button--sm;
+    @include advertise--sm;
+    
+    @include homeSlider--sm;
+    @include pageFooter--sm;
+    @include pageHero--sm;
+    @include fullSearchForm--sm;
+
+    @include authPageTemplate--sm;
+    @include basketPage--sm;
+    @include productPage--sm;
+    @include userPage--sm;
+}
+
+@media screen and (max-width:699px){
+    @include fullSearchForm--sm-max;
+}

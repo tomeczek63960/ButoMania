@@ -1,0 +1,28 @@
+.auth-page-template{
+    margin-top: 30px;
+    margin-bottom: 75px;
+
+    &__heading{
+        @extend %heading;
+        text-align: center;
+    }
+    &__content{
+        margin: 35px auto 0;
+        max-width: 450px;
+    }
+    .btn--primary{
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__text{
+        margin-top: 35px;
+        text-align: center;
+    }
+}
+
+@mixin authPageTemplate--sm {
+    .auth-page-template__heading{
+        font-size: 40px;
+    }
+}

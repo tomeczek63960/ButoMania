@@ -1,0 +1,51 @@
+.icon{
+    &--facebook,
+    &--youtube,
+    &--instagram,
+    &--phone,
+    &--mail{
+        @extend %footer-icons;    
+    }
+
+    &--facebook{
+        background-image: url('../assets/icons/contact/facebook.svg');
+    }
+    &--instagram{
+        background-image: url('../assets/icons/contact/instagram.svg');
+    }
+    &--youtube{
+        background-image: url('../assets/icons/contact/youtube.svg');
+    }
+    &--phone{
+        background-image: url('../assets/icons/contact/phone.svg');
+    }
+    &--mail{
+        margin-right: 0;
+        background-image: url('../assets/icons/contact/mail.svg');
+    }
+
+    &--paypal,
+    &--payu,
+    &--visa{
+        padding-left: 30px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+    &--paypal{
+        background-image: url('../assets/icons/paypal.svg');
+    }
+    &--payu{
+        background-image: url('../assets/icons/payu.svg');
+    }
+    &--visa{
+        background-image: url('../assets/icons/credit-card.svg');
+    }
+
+    &--user{
+        @include backgroundImage('icons/user.svg',contain, left center);
+    }
+    &--email{
+        @include backgroundImage('icons/contact/mail.svg',contain, left center);
+    }
+}

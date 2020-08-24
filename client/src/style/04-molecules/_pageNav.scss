@@ -1,0 +1,4 @@
+.page-nav{
+    @include flex(space-between, center);
+    @include size(100%, 90px);
+}

@@ -1,0 +1,65 @@
+.user-page{
+    padding-top: 20px;
+
+    &__heading{
+        @extend %heading;
+        margin-top: 50px;
+        text-transform: capitalize;
+    }
+    &__subheading{
+        margin-top: 25px;
+        font-size: 23px;
+        font-weight: bold;
+    }
+  
+    &__base-data{
+        margin-top: 30px;
+
+        p{
+            padding-left: 30px;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    &__edit-back{
+        padding: 7px 20px;
+        display: inline-block;
+        background-color: $red;
+        color:$white;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+    &__delivery-adress p{
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    &__edit{
+        form{
+            max-width: 650px;
+        }
+    }
+    input,
+    button{
+        max-width: 400px;
+        border-radius: 5px;
+    }
+}
+@mixin userPage--xs {
+    .user-page{
+
+        &__heading{
+            margin-top: 45px;
+            font-size: 30px;
+        }
+        &__subheading{
+            margin-top: 35px;
+            font-size: 27px;
+        }
+    }
+}
+@mixin userPage--sm {
+    .btn-wrapper{
+        margin-top: 25px;
+    }
+}

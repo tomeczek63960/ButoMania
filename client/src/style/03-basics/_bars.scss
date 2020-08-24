@@ -1,0 +1,46 @@
+.bars{
+    @include size(50px,50px);
+    display: block;
+    position: relative;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+
+    &__line{
+        @include size(66%, 4px);
+        @include absolute(50%, auto, auto, 50%, translate( -50%, -50% ));
+        display: block;
+        background-color: $black;
+        transition: 0.7s;
+        pointer-events: none;
+        
+        &::before,
+        &::after{
+            @extend %master-size;
+            @include absolute(auto,0);
+            content:"";
+            display: block;
+            background-color: $black;
+            transition: 0.7s;
+        }
+        &::before{
+            top:-10px;
+        }
+        &::after{
+            bottom:-10px;
+        }
+    }
+
+    &--active &__line{
+        background-color: transparent;
+
+        &::before{
+            top:0;
+            transform:rotate(45deg);
+        }
+        &::after{
+            bottom:0;
+            transform:rotate(-45deg);
+        }
+    }
+}

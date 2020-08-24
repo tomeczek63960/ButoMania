@@ -1,0 +1,13 @@
+.center-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1350px;
+}
+@mixin utilities--sm {
+    .center-wrapper{    
+        padding-left:40px;
+        padding-right: 40px;
+    }
+}

@@ -1,0 +1,74 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Poppins;
+    font-weight: normal;
+}
+.body-nav--active{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea{
+    outline:none;
+}
+
+button{
+    border:none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    @include backgroundImage('icons/arrow.svg',10px,right 10px center);
+    @include size(auto,45px);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-padding-end: 2px;
+    -moz-padding-end: 2px;
+    -webkit-padding-start: 2px;
+    -moz-padding-start: 2px;
+    margin: 0;
+    padding: 9px 30px 9px 15px;
+    background-color: $white; 
+    border:none;
+    border-radius: 6px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    color: $dark;
+    font-size: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
