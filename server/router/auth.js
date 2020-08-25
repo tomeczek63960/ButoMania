@@ -27,7 +27,7 @@ router.post('/register', async (req,res) => {
 
     try{
         const isUserEgsist = await registerModel.find( { email } );
-        if( isUserEgsist[0] ) return res.status(400).send("Podany login jest już zajęty");
+        if( isUserEgsist[0] ) return res.status(400).send({ msg: "Podany email jest już zajęty"});
         
         const salt = bcrypt.genSaltSync(10);
         const hashedPassword = await bcrypt.hashSync( password, salt );
@@ -46,7 +46,7 @@ router.put('/change', authorization ,async (req,res) => {
 
     try{
         const isExistUser = await registerModel.find({ email: prevEmail });
-        if(!isExistUser[0]) return res.status(404).send("Nie znaleziono takiego użytkownika");
+        if(!isExistUser[0]) return res.status(404).send({ msg: "Nie znaleziono takiego użytkownika"});
         
         if(email !== prevEmail){
             const isNewEmailExist = await registerModel.find({ email });
@@ -69,11 +69,12 @@ router.put('/change', authorization ,async (req,res) => {
 });
 
 router.put('/change-delivery',authorization ,async (req,res) => {
-    const {email, data} = req.body;
+    const {email, data, password} = req.body;
 
     try{
         const updated = await deliveryModel.findOneAndUpdate( { email }, { deliveryAdress: data } );
         updated.deliveryAdress = data;
+        updated.password = password; 
         res.send( updated );
     }catch(err){
         res.send({ msg: "Problemy z serwerem" });

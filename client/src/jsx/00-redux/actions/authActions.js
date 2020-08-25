@@ -70,7 +70,7 @@ export const changeUserDelivery = ( data ) => async dispatch =>{
     const { token, user } = getUserData();
 
     try{
-        const fetchReq = await axios.put('/auth/change-delivery', { data, email: user.email }, { headers: { token } });
+        const fetchReq = await axios.put('/auth/change-delivery', { data, email: user.email, password: user.password }, { headers: { token } });
 
         localStorage.setItem('user', JSON.stringify( fetchReq.data ));
         dispatch({ type: CHANGE_USER_DELIVERY_SUCCESS, payload: { user: fetchReq.data } });

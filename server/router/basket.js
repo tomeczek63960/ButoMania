@@ -67,7 +67,7 @@ router.put("/change-amount", async (req,res)=>{
     const { color, size, model, amountInBasket, email } = req.body;
 
     try{
-        if(amountInBasket < 1) return res.status(400).send("Ilość musi być większa niż 0");
+        if(amountInBasket < 1) return res.status(400).send({ msg: "Ilość musi być większa niż 0"});
         const changedProduct = await basketModel.findOneAndUpdate({ model, size, color, email }, { amountInBasket });
         res.send(changedProduct);
     }catch(err){
