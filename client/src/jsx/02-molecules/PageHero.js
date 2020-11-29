@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import heroBg3 from 'assets/hero.jpg';
-import heroBg1 from 'assets/hero2.jpg';
-import heroBg2 from 'assets/hero3.jpg';
+import heroBg3 from 'assets/hero.webp';
+import heroBg1 from 'assets/hero2.webp';
+import heroBg2 from 'assets/hero3.webp';
 
 const PageHero = () => {
     let [ activeSlide, setActiveSlide ] = useState(); 

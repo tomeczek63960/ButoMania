@@ -4,6 +4,7 @@
   src: url("./fonts/Poppins/Poppins-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -11,6 +12,7 @@
   src: url("./fonts/Poppins/Poppins-Bold.ttf");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -18,6 +20,7 @@
   src: url("./fonts/Pragati_Narrow/PragatiNarrow-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -25,6 +28,7 @@
   src: url("./fonts/Ubuntu/Ubuntu-Bold.ttf");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -32,6 +36,7 @@
   src: url("./fonts/Lato/Lato-Regular.ttf");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -39,6 +44,7 @@
   src: url("./fonts/Lato/Lato-Bold.ttf");
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
 
 .bars__line::before, .bars__line::after, .page-hero__bg__slid, .page-hero__bg__slid img, .full-search-form__price-range input, .select__content, .select-slider__slid label, .checkbox-styled::after, .flex-template__item__img img, .product-page__product__img img, .product-page__product__color > div img, .basket-page__product__img img {

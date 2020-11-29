@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img1 from 'assets/brands/adidas.png';
-import img2 from 'assets/brands/converse.png';
-import img3 from 'assets/brands/guess.png';
-import img4 from 'assets/brands/new-balance.png';
-import img5 from 'assets/brands/reebok.png';
-import img6 from 'assets/brands/tommy-hilfiger.png';
-import img7 from 'assets/brands/puma.png';
-import img8 from 'assets/brands/umbro.png';
+import img1 from 'assets/brands/adidas.webp';
+import img2 from 'assets/brands/converse.webp';
+import img3 from 'assets/brands/guess.webp';
+import img4 from 'assets/brands/new-balance.webp';
+import img5 from 'assets/brands/reebok.webp';
+import img6 from 'assets/brands/tommy-hilfiger.webp';
+import img7 from 'assets/brands/puma.webp';
+import img8 from 'assets/brands/umbro.webp';
 
 
 const HomePageSlider = () => {
