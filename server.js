@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
+const compression = require('compression');
 
 const productRouter = require('./server/router/product');
 const authRouter = require('./server/router/auth');
@@ -13,6 +14,7 @@ const basketRouter = require('./server/router/basket');
 // middleware
     app.use(express.json());
     app.use(cors());
+    app.use(compression());
     app.use('/products/', productRouter);
     app.use('/auth/', authRouter);
     app.use("/basket", basketRouter);
