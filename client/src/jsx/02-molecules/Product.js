@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Product = ({ product : { price, discount, _id, info, name, model }, onClick }) => {
 
@@ -10,7 +11,7 @@ const Product = ({ product : { price, discount, _id, info, name, model }, onClic
         <>
             <Link to={`/product/${_id}`} className="flex-template__item" onClick={onClick && onClick }>
                 <div className="flex-template__item__img">
-                    <img src={info[0].img} alt="sneakersy"/>
+                    <LazyLoadImage effect="blur" src={info[0].img} alt="sneakersy"/>
                 </div>
                 <h5 className="flex-template__item__heading">{name}</h5>
                 <p className="flex-template__item__model">{model}</p>
