@@ -12,7 +12,7 @@ const basketRouter = require('./server/router/basket');
     const PORT = process.env.PORT || 5010;
 
 // middleware
-    app.use(express.json());
+    // app.use(express.json());
     app.use(cors());
     app.use(compression());
     app.use('/products/', productRouter);
