@@ -70,8 +70,7 @@
                 transition: 0s;
 
                 &--active{
-                    transition:7.5s linear;
-                    width:100%;
+                    animation: paginationProgress 7.5s linear;
                 }
             }
         }
@@ -158,5 +157,15 @@
             font-size: 28px;
             padding: 15px 45px;
         }
+    }
+}
+
+
+@keyframes paginationProgress {
+    0% {
+        width:0;
+    }
+    100% {
+        width: 100%;
     }
 }

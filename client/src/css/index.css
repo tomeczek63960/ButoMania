@@ -1056,9 +1056,26 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .page-hero__pagination__span__progress--active {
-  -webkit-transition: 7.5s linear;
-  transition: 7.5s linear;
-  width: 100%;
+  -webkit-animation: paginationProgress 7.5s linear;
+          animation: paginationProgress 7.5s linear;
+}
+
+@-webkit-keyframes paginationProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes paginationProgress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .home__slider {
