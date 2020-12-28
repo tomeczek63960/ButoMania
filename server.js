@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const path = require('path');
 const compression = require('compression');
+const bodyParser = require('body-parser');
 
 const productRouter = require('./server/router/product');
 const authRouter = require('./server/router/auth');
@@ -12,7 +13,7 @@ const basketRouter = require('./server/router/basket');
     const PORT = process.env.PORT || 5010;
 
 // middleware
-    // app.use(express.json());
+    app.use(bodyParser.json());
     app.use(cors());
     app.use(compression());
     app.use('/products/', productRouter);
