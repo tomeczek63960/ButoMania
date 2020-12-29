@@ -1,6 +1,6 @@
 import React from 'react';
+import PageHero from 'jsx/02-molecules/PageHero';
 
-const PageHero = React.lazy(() => import('jsx/02-molecules/PageHero'));
 const HomePageSlider = React.lazy(() => import('jsx/02-molecules/HomePageSlider'));
 const HomePageCategories = React.lazy(() => import('jsx/02-molecules/HomePageCategories.js'));
 const HomeShoes = React.lazy(() => import('jsx/02-molecules/HomeShoes.js'));
@@ -10,7 +10,7 @@ const FullSearchForm = React.lazy(() => import('jsx/03-organisms/FullSearchForm.
 const HomePage = () => {
     return ( 
         <>  
-            <React.Suspense fallback={<div>Wczytuje dane ...</div>}>
+            <React.Suspense fallback={<span></span>}>
                 <PageTemplate>
                     <PageHero/>
 

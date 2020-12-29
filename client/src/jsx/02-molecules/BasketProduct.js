@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBasketProduct, changeAmountInBasket } from 'jsx/00-redux/actions/basketActions';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import PropTypes from 'prop-types';
+import { removeBasketProduct, changeAmountInBasket } from 'jsx/00-redux/actions/basketActions';
 
 const BasketProduct = ({item : { amountInBasket, model,color,size,discount, name,price,img }}) => {
     const dispatch = useDispatch();
@@ -32,7 +33,7 @@ const BasketProduct = ({item : { amountInBasket, model,color,size,discount, name
                 <div className="basket-page__product__flex">
                     <div className="basket-page__product__content">
                         <div className="basket-page__product__img">
-                            <img  src={img} alt={name}/>
+                            <LazyLoadImage effect="blur" src={img} alt={name}/>
                         </div>
                         <div className="basket-page__product__data">
                             <h4 className="basket-page__product__name">{name}</h4>
